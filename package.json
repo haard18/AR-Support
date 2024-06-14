@@ -1,0 +1,73 @@
+{
+  "name": "arsupport",
+  "displayName": "ArSupport",
+  "description": "Extension to work with Arweave simplifies the transactions and basic commands on Arweave",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.networkInfo",
+    "onCommand:extension.uploadData",
+    "onCommand:extension.createTransaction",
+    "onCommand:extension.retrieveData",
+    "onCommand:extension.accountInfo",
+    "onCommand:arsupport.checkBalance",
+    "onCommand:arsupport.createWallet"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.networkInfo",
+        "title": "Fetch Arweave Network Info"
+      },
+      {
+        "command": "extension.uploadData",
+        "title": "Upload Data to Arweave"
+      },
+      {
+        "command": "extension.createTransaction",
+        "title": "Create Transaction on Arweave"
+      },
+      {
+        "command": "extension.retrieveData",
+        "title": "Retrieve Data from Arweave"
+      },
+      {
+        "command": "extension.accountInfo",
+        "title": "Fetch Arweave Account Info"
+      },
+      {
+        "command": "arsupport.checkBalance",
+        "title": "Check Arweave Wallet Balance"
+      },
+      {
+        "command": "arsupport.createWallet",
+        "title": "Create New Arweave Wallet"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.90.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "arlocal": "^1.1.66",
+    "arweave": "^1.15.1",
+    "axios": "^1.7.2"
+  }
+}
