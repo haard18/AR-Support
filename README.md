@@ -1,65 +1,114 @@
-# arsupport README
+# ArSupport Extension
 
-This is the README for your extension "arsupport". After writing up a brief description, we recommend including the following sections.
+## Overview
+
+ArSupport is a VS Code extension designed to simplify interaction with the Arweave blockchain. This extension provides a variety of commands to manage transactions, upload and retrieve data, and interact with Arweave directly from the Visual Studio Code environment.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Fetch Arweave Network Info:** Get the current status of the Arweave network.
+- **Upload Data to Arweave:** Upload data directly from the VS Code editor to Arweave.
+- **Create Transaction on Arweave:** Create and post a transaction with data from the active text editor.
+- **Retrieve Data from Arweave:** Retrieve and save data from a specified transaction ID.
+- **Fetch Arweave Account Info:** Get the balance and address information of the Arweave wallet.
+- **Check Arweave Wallet Balance:** Check the balance of your Arweave wallet.
+- **Create New Arweave Wallet:** Generate a new Arweave wallet and save it locally.
+- **Check Transaction Status:** Check the status of a specified transaction ID.
+- **Install AOS:** Install Arweave Operating System (AOS) on your system.
+- **Create AO ChatRoom Boilerplate:** Generate a basic AO chatroom Lua script.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Ensure you have Node.js installed on your system. You can download it from [Node.js](https://nodejs.org/).
+2. Install the extension from the Visual Studio Code Marketplace or manually by cloning this repository and running `npm install` in the extension directory.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Commands
 
-## Requirements
+### Fetch Arweave Network Info
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Get the current status of the Arweave network.
 
-## Extension Settings
+**Command:** `extension.networkInfo`
+**Title:** `Fetch Arweave Network Info`
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Upload Data to Arweave
 
-For example:
+Upload data from the active text editor to Arweave. You will be prompted to select the network (testnet or mainnet) and provide the file path to upload.
 
-This extension contributes the following settings:
+**Command:** `extension.uploadData`
+**Title:** `Upload Data to Arweave`
+### Create Transaction on Arweave
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+Create a transaction with data from the active text editor and post it to Arweave. You will be prompted to select the network (testnet or mainnet).
 
-## Known Issues
+**Command:** `extension.createTransaction`
+**Title:** `Create Transaction on Arweave`
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Retrieve Data from Arweave
 
-## Release Notes
+Retrieve data from a specified transaction ID and save it locally.
 
-Users appreciate release notes as you update your extension.
+**Command:** `extension.retrieveData`
+**Title:** Retrieve Data from Arweave
 
-### 1.0.0
+### Fetch Arweave Account Info
 
-Initial release of ...
+Get the balance and address information of the Arweave wallet.
 
-### 1.0.1
+**Command:** `extension.accountInfo`
+**Title:** `Fetch Arweave Account Info`
+### Check Arweave Wallet Balance
 
-Fixed issue #.
+Check the balance of your Arweave wallet.
 
-### 1.1.0
+**Command:** `arsupport.checkBalance`
+**Title:** `Check Arweave Wallet Balance`
+### Create New Arweave Wallet
 
-Added features X, Y, and Z.
+Generate a new Arweave wallet and save it locally.
+
+**Command:** `arsupport.createWallet`
+**Title:** `Create New Arweave Wallet`
+### Check Transaction Status
+
+Check the status of a specified transaction ID.
+
+**Command:** `arsupport.transactionStatus`
+**Title:** `Check Transaction Status`
+### Install AOS
+
+Install Arweave Operating System (AOS) on your system. This command checks for Node.js and npm, and installs AOS if not already installed.
+
+**Command:** `arsupport.installAOS`
+**Title:** `Install AOS`
+### Create AO ChatRoom Boilerplate
+
+Generate a basic AO chatroom Lua script and save it to the `aochat` folder in your workspace.
+
+**Command:** `arsupport.createAOChat`
+**Title:** `Create AO ChatRoom Boilerplate`
+## Usage
+
+1. **Open Command Palette:** Press `Ctrl+Shift+P` to open the Command Palette.
+2. **Run Commands:** Type the command you want to run (e.g., `Arweave:Network Info`) and press Enter.
+3. **Follow Prompts:** Follow any additional prompts to complete the command.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Support
+
+If you encounter any issues or have any questions, please open an issue in the [GitHub repository](https://github.com/haard18/AR-Support/issues).
 
 ---
 
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Thank you for using ArSupport! We hope this extension makes your interaction with the Arweave blockchain more efficient and seamless.

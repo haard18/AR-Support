@@ -1,10 +1,14 @@
 {
   "name": "arsupport",
   "displayName": "ArSupport",
-  "description": "Extension to work with Arweave simplifies the transactions and basic commands on Arweave",
+  "description": "Extension to work with Arweave simplifies the transactions and basic commands on Arweave + AO Support",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haard18/AR-Support"
   },
   "categories": [
     "Other"
@@ -16,7 +20,10 @@
     "onCommand:extension.retrieveData",
     "onCommand:extension.accountInfo",
     "onCommand:arsupport.checkBalance",
-    "onCommand:arsupport.createWallet"
+    "onCommand:arsupport.createWallet",
+    "onCommand:arsupport.transactionStatus",
+    "onCommand:arsupport.installAOS",
+    "onCommand:arsupport.createAOChat"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -48,6 +55,18 @@
       {
         "command": "arsupport.createWallet",
         "title": "Create New Arweave Wallet"
+      },
+      {
+        "command": "arsupport.transactionStatus",
+        "title": "Check Transaction Status"
+      },
+      {
+        "command":"arsupport.installAOS",
+        "title":"Install AOS on your system "
+      },
+      {
+        "command":"arsupport.createAOChat",
+        "title":"Create AO ChatRoom BoilerPlate"
       }
     ]
   },
