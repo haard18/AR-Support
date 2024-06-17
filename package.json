@@ -2,7 +2,7 @@
   "name": "arsupport",
   "displayName": "ArSupport",
   "description": "Extension to work with Arweave simplifies the transactions and basic commands on Arweave + AO Support",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.90.0"
   },

@@ -271,13 +271,13 @@ function activate(context) {
 		if (transactionId) {
 			try {
 				const transaction = await arweave.transactions.get(transactionId);
-				const data = transaction.get('data', { decode: true, string: true });
+				const data = transaction.get('data', { decode: true, string: false });
 				const workspaceFolder = vscode.workspace.workspaceFolders[0];
 				const folderPath = path.join(workspaceFolder.uri.fsPath, 'retrieval');
 				if (!fs.existsSync(folderPath)) {
 					fs.mkdirSync(folderPath);
 				}
-				const filePath = path.join(folderPath, 'transactiond.json');
+				const filePath = path.join(folderPath, `${transactionId}.json`);
 				fs.writeFileSync(filePath, JSON.stringify(data));
 				vscode.window.showInformationMessage(`Data retrieved and saved to ${filePath}`);
 			} catch (error) {

@@ -22,6 +22,35 @@ ArSupport is a VS Code extension designed to simplify interaction with the Arwea
 1. Ensure you have Node.js installed on your system. You can download it from [Node.js](https://nodejs.org/).
 2. Install the extension from the Visual Studio Code Marketplace or manually by cloning this repository and running `npm install` in the extension directory.
 
+## Screenshots
+- Opening up the command palette after Installing the extension, you would see the following options
+![alt text](image.png) 
+1. **Fetch Arweave Network Info**
+![alt text](image-1.png)
+2. **Upload Data to Arweave**
+- A prompt would appear asking you to select the network you want to upload to and the file path of the data you want to upload
+![alt text](image-2.png)
+![alt text](image-3.png)
+3. **Create Transaction on Arweave**
+- Similar to the upload data command, a prompt would appear asking you to select the network you want to upload to and caputer the content of the active text editor
+4. **Retrieve Data from Arweave**
+- A prompt would appear asking you to enter the transaction ID of the data you want to retrieve
+- The data would be saved in a file in the root directory of the workspace with uint8 encoding array
+![alt text](image-4.png)
+5. **Fetch Arweave Balance Info**
+- The balance of the wallet would be displayed in the output window/ the wallet address would be taken from wallet.json file in the root directory of the workspace
+![alt text](image-5.png)
+6. **Install AOS**
+- The extension would check if Node.js and npm are installed on your system and install AOS if it are not installed
+- If AOS is already installed, a message would be displayed in the output window
+![alt text](image-6.png)
+7. **Create AO ChatRoom Boilerplate**
+- A basic AO chatroom Lua script would be generated and saved in the aochat folder in the root directory of the workspace
+![alt text](image-7.png)
+8. **Check Transaction Status**
+- A prompt would appear asking you to enter the transaction ID of the transaction you want to check the status of
+![alt text](image-8.png)
+
 ## Commands
 
 ### Fetch Arweave Network Info
